@@ -57,11 +57,30 @@ python osint_assistant.py --query "quantum computing advances"
 ### Web Application
 
 Start the web application:
+
+#### Linux/Mac
 ```bash
-python osint_web_app.py
+bash run.sh
+```
+or make it executable first:
+```bash
+chmod +x run.sh
+./run.sh
 ```
 
-Then open your browser and navigate to http://localhost:5000
+#### Windows
+```
+run_windows.bat
+```
+
+The web application will automatically:
+1. Install required dependencies
+2. Set up the environment file if not present
+3. Build the React frontend if needed
+4. Start the Flask server
+
+On Windows, the script will automatically open your browser to http://localhost:5000.
+On Linux/Mac, you'll need to open your browser and navigate to http://localhost:5000 manually.
 
 ### Advanced Options
 
