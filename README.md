@@ -23,7 +23,7 @@ An AI-enhanced OSINT (Open Source Intelligence) tool for gathering, analyzing, a
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/osint-assistant.git
+   git clone https://github.com/AXRoux/OSINT-Assistant.git
    cd osint-assistant
    ```
 
