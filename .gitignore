@@ -1,10 +1,46 @@
-# Byte-compiled / optimized / DLL files
+# Environment variables
+.env
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environment
+venv/
+ENV/
+env/
+virtualenv/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OSINT Assistant output files
+osint_data*.json
+*_results.json
 
 # Distribution / packaging
 .Python
@@ -74,9 +110,6 @@ docs/_build/
 # PyBuilder
 .pybuilder/
 target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # IPython
 profile_default/
