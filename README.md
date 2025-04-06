@@ -206,7 +206,49 @@ When running the application directly with `python osint_web_app.py`, the browse
 
 ### Linux/Mac Users
 
-For dependency issues, run:
+#### "No module named 'dotenv'" or "module 'dotenv' has no attribute" Errors
+If you encounter either of these errors when running the application:
+```
+ModuleNotFoundError: No module named 'dotenv'
+```
+or
+```
+AttributeError: module 'dotenv' has no attribute 'dotenv_values'
+```
+
+There are several ways to fix this issue:
+
+1. **Run the diagnostic script** (recommended):
+   ```bash
+   ./fix_linux_dotenv.sh
+   ```
+   or if it's not executable:
+   ```bash
+   bash fix_linux_dotenv.sh
+   ```
+   This script will:
+   - Diagnose your Python environment
+   - Try multiple installation methods
+   - Check if the installed module has all required functions
+   - Provide Linux-specific troubleshooting guidance
+
+2. **Use the included standalone module**:
+   No installation required - we've included a standalone `dotenv.py` file directly in the project folder that implements all necessary functions including `dotenv_values`.
+
+3. **Manual installation methods**:
+   ```bash
+   pip install python-dotenv
+   ```
+   or
+   ```bash
+   pip3 install python-dotenv
+   ```
+   or
+   ```bash
+   sudo pip install python-dotenv
+   ```
+
+For general dependency issues, you can also run:
 ```bash
 pip install -r requirements.txt
 ```

@@ -53,6 +53,32 @@ def load_dotenv(dotenv_path: Union[str, os.PathLike, None] = None,
     return True
 
 
+def dotenv_values(dotenv_path: Union[str, os.PathLike, None] = None, 
+                 encoding: Optional[str] = None) -> Dict[str, str]:
+    """
+    Parse a .env file and return a dictionary of key-value pairs.
+    This is the function that Flask CLI uses.
+    
+    Args:
+        dotenv_path: Path to the .env file. If not provided, looks for .env in current directory
+        encoding: Encoding of the .env file
+        
+    Returns:
+        Dictionary of key-value pairs from the .env file
+    """
+    if dotenv_path is None:
+        dotenv_path = os.path.join(os.getcwd(), '.env')
+    
+    if not os.path.exists(dotenv_path):
+        return {}
+    
+    try:
+        with io.open(dotenv_path, encoding=encoding or 'utf-8') as f:
+            return parse_dotenv(f)
+    except Exception:
+        return {}
+
+
 def parse_dotenv(file_obj: TextIO) -> Dict[str, str]:
     """Parse the contents of a .env file and return a dictionary of key-value pairs."""
     result = {}
