@@ -27,11 +27,7 @@ This project includes both a command-line interface and a full-featured web appl
 1. Clone the repository:
    ```bash
    git clone https://github.com/AXRoux/OSINT-Assistant.git
-<<<<<<< HEAD
-   cd osint-assistant
-=======
    cd OSINT-Assistant
->>>>>>> 9d319b9 (included the web app aspect to the readme)
    ```
 
 2. Install dependencies:
