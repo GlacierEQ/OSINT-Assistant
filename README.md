@@ -162,16 +162,43 @@ If you encounter this error when running the application:
 ModuleNotFoundError: No module named 'dotenv'
 ```
 
-You can fix it by:
+There are several ways to fix this issue:
 
-1. Running the dependency fix script:
+1. **Run the diagnostic script** (most comprehensive):
    ```
-   fix_dependencies.bat
+   fix_windows_dotenv.bat
    ```
-   
-2. Or manually installing the required package:
+   This script will:
+   - Diagnose your Python environment
+   - Try multiple installation methods
+   - Provide detailed troubleshooting guidance
+
+2. **Use the included standalone module**:
+   No installation required - we've included a standalone `dotenv.py` file directly in the project folder. This will work even if pip fails.
+
+3. **Manual installation methods**:
    ```
    pip install python-dotenv
+   ```
+   or
+   ```
+   python -m pip install python-dotenv
+   ```
+   or
+   ```
+   pip install --user python-dotenv
+   ```
+
+4. **Administrator privileges**:
+   Run Command Prompt as Administrator, then try:
+   ```
+   pip install python-dotenv
+   ```
+
+5. **Multiple Python installations**:
+   If you have multiple Python versions, specify the version:
+   ```
+   py -3.9 -m pip install python-dotenv
    ```
 
 #### Browser Not Opening Automatically
