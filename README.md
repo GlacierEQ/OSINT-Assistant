@@ -2,6 +2,8 @@
 
 An AI-enhanced OSINT (Open Source Intelligence) tool for gathering, analyzing, and reporting on information from various web sources. This tool leverages the power of Perplexity AI to provide deeper insights and more accurate analysis.
 
+This project includes both a command-line interface and a full-featured web application for easier interaction.
+
 ## Features
 
 - 🔍 **Web Search:** Collect information from multiple sources based on specific queries
@@ -18,13 +20,18 @@ An AI-enhanced OSINT (Open Source Intelligence) tool for gathering, analyzing, a
 
 - Python 3.8+
 - pip package manager
+- Node.js 14+ and npm (for web application)
 
 ### Setup
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/AXRoux/OSINT-Assistant.git
+<<<<<<< HEAD
    cd osint-assistant
+=======
+   cd OSINT-Assistant
+>>>>>>> 9d319b9 (included the web app aspect to the readme)
    ```
 
 2. Install dependencies:
@@ -44,12 +51,21 @@ An AI-enhanced OSINT (Open Source Intelligence) tool for gathering, analyzing, a
 
 ## Usage
 
-### Basic Usage
+### Command Line Interface
 
 Run a search query:
 ```bash
 python osint_assistant.py --query "quantum computing advances"
 ```
+
+### Web Application
+
+Start the web application:
+```bash
+python osint_web_app.py
+```
+
+Then open your browser and navigate to http://localhost:5000
 
 ### Advanced Options
 
