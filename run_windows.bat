@@ -9,8 +9,12 @@ if %ERRORLEVEL% NEQ 0 (
     exit /b 1
 )
 
-REM Install dependencies if needed
-echo Checking dependencies...
+REM Install key dependencies first to avoid common errors
+echo Installing critical dependencies...
+pip install python-dotenv
+
+REM Install all other dependencies
+echo Installing remaining dependencies...
 pip install -r requirements.txt
 
 REM Check if .env file exists

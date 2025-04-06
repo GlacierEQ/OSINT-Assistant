@@ -152,6 +152,38 @@ When contributing to this project, please:
 4. Make sure not to commit any API keys or sensitive information
 5. Verify that all tests pass before submitting a PR
 
+## Troubleshooting
+
+### Windows Users
+
+#### "No module named 'dotenv'" Error
+If you encounter this error when running the application:
+```
+ModuleNotFoundError: No module named 'dotenv'
+```
+
+You can fix it by:
+
+1. Running the dependency fix script:
+   ```
+   fix_dependencies.bat
+   ```
+   
+2. Or manually installing the required package:
+   ```
+   pip install python-dotenv
+   ```
+
+#### Browser Not Opening Automatically
+When running the application directly with `python osint_web_app.py`, the browser may not open automatically. Use `run_windows.bat` instead to automatically open the browser with the application.
+
+### Linux/Mac Users
+
+For dependency issues, run:
+```bash
+pip install -r requirements.txt
+```
+
 ## Security Notes
 
 ⚠️ **IMPORTANT**: This tool requires API keys to function properly.
